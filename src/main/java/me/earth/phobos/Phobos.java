@@ -37,11 +37,11 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.lwjgl.opengl.Display;
 
-@Mod(modid="phobos", name="Phobos", version="1.9.0")
+@Mod(modid="viskaware", name="ViskaWare", version="1.0.0)
 public class Phobos {
-    public static final String MODID = "phobos";
-    public static final String MODNAME = "Phobos";
-    public static final String MODVER = "1.9.0";
+    public static final String MODID = "viska";
+    public static final String MODNAME = "Viska";
+    public static final String MODVER = "1.0.0";
     public static final String NAME_UNICODE = "3\u1d00\u0280\u1d1b\u029c\u029c4\u1d04\u1d0b";
     public static final String PHOBOS_UNICODE = "\u1d18\u029c\u1d0f\u0299\u1d0f\ua731";
     public static final String CHAT_SUFFIX = " \u23d0 3\u1d00\u0280\u1d1b\u029c\u029c4\u1d04\u1d0b";
@@ -78,21 +78,19 @@ public class Phobos {
 
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent event) {
-        LOGGER.info("ohare is cute!!!");
-        LOGGER.info("faggot above - 3vt");
-        LOGGER.info("megyn wins again");
-        LOGGER.info("gtfo my logs - 3arth");
+        LOGGER.info("nigger ran my rat");
+
     }
 
     @Mod.EventHandler
     public void init(FMLInitializationEvent event) {
         customMainScreen = new GuiCustomMainScreen();
-        Display.setTitle((String)"3arthh4ck - v.1.9.0");
+        Display.setTitle((String)"ViskaWare 1.0.0");
         Phobos.load();
     }
 
     public static void load() {
-        LOGGER.info("\n\nLoading 3arthh4ck 1.9.0");
+        LOGGER.info("\n\nLoading");
         unloaded = false;
         if (reloadManager != null) {
             reloadManager.unload();
@@ -134,11 +132,11 @@ public class Phobos {
             DiscordPresence.start();
         }
         cosmeticsManager = new CosmeticsManager();
-        LOGGER.info("3arthh4ck initialized!\n");
+        LOGGER.info("initialized!\n");
     }
 
     public static void unload(boolean unload) {
-        LOGGER.info("\n\nUnloading 3arthh4ck 1.9.0");
+        LOGGER.info("\n\nUnloading");
         if (unload) {
             reloadManager = new ReloadManager();
             reloadManager.init(commandManager != null ? commandManager.getPrefix() : ".");
