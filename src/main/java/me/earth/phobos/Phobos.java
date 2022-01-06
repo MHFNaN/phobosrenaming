@@ -37,7 +37,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.lwjgl.opengl.Display;
 
-@Mod(modid="viskaware", name="ViskaWare", version="1.0.0)
+@Mod(modid="viska", name="Viska", version="1.0.0")
 public class Phobos {
     public static final String MODID = "viska";
     public static final String MODNAME = "Viska";
@@ -46,7 +46,7 @@ public class Phobos {
     public static final String PHOBOS_UNICODE = "\u1d18\u029c\u1d0f\u0299\u1d0f\ua731";
     public static final String CHAT_SUFFIX = " \u23d0 3\u1d00\u0280\u1d1b\u029c\u029c4\u1d04\u1d0b";
     public static final String PHOBOS_SUFFIX = " \u23d0 \u1d18\u029c\u1d0f\u0299\u1d0f\ua731";
-    public static final Logger LOGGER = LogManager.getLogger((String)"3arthh4ck");
+    public static final Logger LOGGER = LogManager.getLogger((String)"Viska");
     public static ModuleManager moduleManager;
     public static SpeedManager speedManager;
     public static PositionManager positionManager;
@@ -78,14 +78,13 @@ public class Phobos {
 
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent event) {
-        LOGGER.info("nigger ran my rat");
-
+        LOGGER.info("why are you looking here its a skidded client");
     }
 
     @Mod.EventHandler
     public void init(FMLInitializationEvent event) {
         customMainScreen = new GuiCustomMainScreen();
-        Display.setTitle((String)"ViskaWare 1.0.0");
+        Display.setTitle((String)"viska");
         Phobos.load();
     }
 
