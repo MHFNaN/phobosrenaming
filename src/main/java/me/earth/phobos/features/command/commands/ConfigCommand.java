@@ -17,13 +17,13 @@ extends Command {
     @Override
     public void execute(String[] commands) {
         if (commands.length == 1) {
-            ConfigCommand.sendMessage("You`ll find the config files in your gameProfile directory under phobos/config");
+            ConfigCommand.sendMessage("You`ll find the config files in your gameProfile directory under viska/config");
             return;
         }
         if (commands.length == 2) {
             if ("list".equals(commands[0])) {
                 String configs = "Configs: ";
-                File file = new File("phobos/");
+                File file = new File("viska/");
                 List directories = Arrays.stream(file.listFiles()).filter(File::isDirectory).filter(f -> !f.getName().equals("util")).collect(Collectors.toList());
                 StringBuilder builder = new StringBuilder(configs);
                 for (File file1 : directories) {
