@@ -42,14 +42,14 @@ import me.earth.phobos.util.Util;
 public class ConfigManager
 implements Util {
     public ArrayList<Feature> features = new ArrayList();
-    public String config = "phobos/config/";
+    public String config = "viska/config/";
     public boolean loadingConfig;
     public boolean savingConfig;
 
     public void loadConfig(String name) {
         this.loadingConfig = true;
         List files = Arrays.stream((Object[])Objects.requireNonNull(new File("phobos").listFiles())).filter(File::isDirectory).collect(Collectors.toList());
-        this.config = files.contains(new File("phobos/" + name + "/")) ? "phobos/" + name + "/" : "phobos/config/";
+        this.config = files.contains(new File("viska/" + name + "/")) ? "viska/" + name + "/" : "viska/config/";
         Phobos.friendManager.onLoad();
         for (Feature feature : this.features) {
             try {
@@ -84,18 +84,18 @@ implements Util {
     }
 
     public void saveCurrentConfig() {
-        File currentConfig = new File("phobos/currentconfig.txt");
+        File currentConfig = new File("viska/currentconfig.txt");
         try {
             if (currentConfig.exists()) {
                 FileWriter writer = new FileWriter(currentConfig);
                 String tempConfig = this.config.replaceAll("/", "");
-                writer.write(tempConfig.replaceAll("phobos", ""));
+                writer.write(tempConfig.replaceAll("viska", ""));
                 writer.close();
             } else {
                 currentConfig.createNewFile();
                 FileWriter writer = new FileWriter(currentConfig);
                 String tempConfig = this.config.replaceAll("/", "");
-                writer.write(tempConfig.replaceAll("phobos", ""));
+                writer.write(tempConfig.replaceAll("viska", ""));
                 writer.close();
             }
         }
@@ -105,7 +105,7 @@ implements Util {
     }
 
     public String loadCurrentConfig() {
-        File currentConfig = new File("phobos/currentconfig.txt");
+        File currentConfig = new File("viska/currentconfig.txt");
         String name = "config";
         try {
             if (currentConfig.exists()) {
