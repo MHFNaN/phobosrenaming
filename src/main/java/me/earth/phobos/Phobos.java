@@ -164,7 +164,7 @@ public class Phobos {
         inventoryManager = null;
         notificationManager = null;
         safetyManager = null;
-        LOGGER.info("3arthh4ck unloaded!\n");
+        LOGGER.info("unloaded!\n");
     }
 
     public static void reload() {
@@ -182,7 +182,7 @@ public class Phobos {
             }
             eventManager.onUnload();
             moduleManager.onUnload();
-            configManager.saveConfig(Phobos.configManager.config.replaceFirst("phobos/", ""));
+            configManager.saveConfig(Phobos.configManager.config.replaceFirst("viska/", ""));
             moduleManager.onUnloadPost();
             timerManager.unload();
             unloaded = true;
